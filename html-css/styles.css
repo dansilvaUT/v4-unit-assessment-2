@@ -12,3 +12,130 @@ the font is called 'nunito' and can be found on google fonts
 ***you can use it if you'd like or you can choose your own***
 
 */
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+.nav-heading {
+    background-color:rgb(37, 37, 37);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+}
+
+.nav-heading nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 20%;
+}
+
+#heading {
+    color: rgb(42, 171, 226);
+    font-size: 2em;
+    padding: 0 10px;
+}
+
+nav span {
+    color: white;
+}
+
+.content {
+    box-sizing: border-box;
+    padding: 100px 100px 0 100px;
+    /* width: 75%; */
+    display: flex;
+    margin: 0 100px;
+}
+
+.main-content-1, .main-content-2 {
+    padding: 10px;
+}
+
+p {
+    color: rgb(37, 37, 37);
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile, .article-list {
+    box-shadow: 0 0 10px 8px rgba(102, 75, 75, .3);
+    overflow:auto;
+    height: auto;
+    width: 12vw;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.article-list {
+    margin-top: 30px;
+}
+
+.article-list h3 {
+    text-align: center;
+}
+
+.profile-pic {
+    height: 120px;
+    width: 120px;
+}
+
+/*SECONDARY CONTENT*/
+.img-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+aside {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 700px;
+    align-items: center;
+}
+
+button {
+    background-color: transparent;
+    color:rgb(42, 171, 226);
+    border-style: none;
+    position: relative;
+    left: 600px;
+}
+
+.placeholder {
+    height: 200px;
+    width: 200px;
+    margin: 5px;
+}
+
+footer {
+    background-color: rgb(42, 171, 226);
+    padding: 10px;
+    position: relative;
+}
+
+.question {
+    position: fixed;
+    color:rgba(102, 75, 75, .3);
+    background-color: rgb(42, 171, 226);
+    border: 5px solid black;
+    border-radius: 100%;
+    height: 35px;
+    width: 35px;
+    bottom: 10px;
+    right: 30px;
+    text-align: center;
+}
+
+.question p {
+    position: relative;
+    bottom: 5px;
+}
