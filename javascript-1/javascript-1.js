@@ -9,13 +9,8 @@
 */
 
 //CODE HERE
+const myArr = [4, 'abc', ['cat', 'dog', 'bird'], 77]
 
-const myArr = [
-    4,
-    'abc',
-    ['cat', 'dog', 'bird'],
-    77
-];
 ////////////////////PROBLEM 2////////////////////
 /*
     The following array, nestedLetters, contains many levels of nested arrays.
@@ -43,6 +38,7 @@ const desert = ['rattlesnake', 'coyote']
 
 //CODE HERE
 const animals = [...forest, ...ocean, ...savannah, ...desert];
+
 /*
     Now use the spread operator to make a copy of your animals array.
     Call the new array 'animalsCopy' and add 'elephant' onto the end of the array.
@@ -50,6 +46,7 @@ const animals = [...forest, ...ocean, ...savannah, ...desert];
 
 //CODE HERE
 const animalsCopy = [...animals, 'elephant'];
+
 ////////////////////PROBLEM 4////////////////////
 /*
     Write an arrow function called 'compareNums' that takes in 2 parameters, 
@@ -62,6 +59,7 @@ const animalsCopy = [...animals, 'elephant'];
 const compareNums = (num1, num2) => {
     return num1 > num2 ? num1 : num2;
 }
+
 
 ////////////////////PROBLEM 5////////////////////
 /*
@@ -127,7 +125,6 @@ const shapes = {
 for (let key in shapes) {
     if (shapes[key] % 2 !== 0) {
         delete shapes[key];
-
     }
 }
 ////////////////////PROBLEM 9////////////////////
@@ -177,6 +174,7 @@ for (let i = 0; i < classes.length; i++) {
         }
     }
 }
+
 ////////////////////PROBLEM 10////////////////////
 /*
     Use nested for loops to compare the letters in the lettersToPair array below.
@@ -194,10 +192,11 @@ let pairsArray = []
 for (let i = 0; i < lettersToPair.length; i++) {
     for (let j = i + 1; j < lettersToPair.length; j++) {
         if (lettersToPair[i] === lettersToPair[j]) {
-            pairsArray.push([i, j])
+            pairsArray.push([i, j]);
         }
     }
 }
+
 //////////////////////////////////PROBLEMS 11-14//////////////////////////////////
 /*
     Problems 12-14 are all going to build off of problem 11.
@@ -291,6 +290,7 @@ function dogIntro(treat, toy) {
 
 //CODE HERE
 const fidoIntro = dogIntro.apply(fido, ['chicken', 'tennis ball']);
+
 ////////////////////PROBLEM 15////////////////////
 /*
     Write a constructor function called Phone.
@@ -319,11 +319,11 @@ function Phone(brand, model, storage, color, sold) {
 */
 
 //CODE HERE
-let phone1 = new Phone('Apple', 'iPhone 12', 128, 'black', true);
+let phone1 = new Phone('Apple', 'iPhone X', 64, 'White', false);
 
-let phone2 = new Phone('Apple', 'iPhone 11', 32, 'white', false);
+let phone2 = new Phone('Samsung', 'Galaxy', 64, 'Black', false);
 
-let phone3 = new Phone('Samsung', 'Galaxy 10', 32, 'silver', true);
+let phone3 = new Phone('Apple', 'iPhone 12', 32, 'White', false);
 
 /*
     Last, add a prototype method to Phone.
