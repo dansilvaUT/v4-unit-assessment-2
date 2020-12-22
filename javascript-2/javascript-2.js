@@ -37,12 +37,12 @@ let foods = [
 
 //CODE HERE
 foods.forEach(element => {
-  element.carbs * 4;
-  element.protein * 4;
-  element.fat * 9;
-  element.calories = element.carbs + element.protein + element.fat;
-  return element;
+  return element.calories =
+    (element.carbs * 4) +
+    (element.protein * 4) +
+    (element.fat * 9);
 });
+
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
   For problems 2-4, you will be working with the products array below.
@@ -87,9 +87,9 @@ const products = [
 */
 
 //CODE HERE
-const saleProducts = products.map(element => {
-  element.price -= (element.price * .25)
-  return element;
+const saleProducts = products.map(product => {
+  product.price = product.price - (product.price * .25)
+  return product;
 });
 ////////////////////PROBLEM 3////////////////////
 /*
@@ -100,7 +100,9 @@ const saleProducts = products.map(element => {
 */
 
 //CODE HERE
-const blueProducts = saleProducts.filter(element => element.color.includes('blue'));
+const blueProducts = saleProducts.filter(product => {
+  return product.color.includes('blue');
+});
 ////////////////////PROBLEM 4////////////////////
 /*
   Now you'd like to get them their order total. 
@@ -109,8 +111,8 @@ const blueProducts = saleProducts.filter(element => element.color.includes('blue
 */
 
 //CODE HERE
-const orderTotal = blueProducts.reduce((acc, curr) => {
-  return acc + curr.price;
+const orderTotal = blueProducts.reduce((acc, cur) => {
+  return acc + cur.price;
 }, 0);
 //////////////////////////////////PROBLEMS 5-8//////////////////////////////////
 /*
@@ -142,7 +144,6 @@ const shippingInfo = {
 
 //CODE HERE
 const helensInfo = Object.assign(contactInfo, shippingInfo);
-
 ////////////////////PROBLEM 6////////////////////
 /*
   Helen has a daughter named Ellen that lives at the same address.
@@ -166,7 +167,7 @@ const { email } = ellensInfo;
 */
 
 //CODE HERE
-const { zipCode, state } = shippingInfo;
+const { zipCode, state } = shippingInfo
 //////////////////////////////////PROBLEMS 9-11//////////////////////////////////
 /*
   Use the userInfo object below to complete problems 9-11.
@@ -237,7 +238,6 @@ const shouldAlert = userInfo.settings.alerts;
 
 //CODE HERE
 const topic = userInfo.topics[userInfo.topics.length - 1];
-
 ////////////////////PROBLEM 11////////////////////
 /*
   Set the value of commenterId below to the userId of the first response to 
@@ -267,14 +267,14 @@ const commenterId = userInfo.comments[1].responses[0].userId;
 const person = {
   name: 'Daniel',
   age: 30,
-  jobs: ['Software Engineer', 'Project Manager', 'UI Developer'],
+  jobs: ['Cashier', 'QA Tech', 'IT Tech'],
   birthday: function () {
-    return this.age += 1;
+    this.age += 1
   },
   favorites: {
     color: 'green',
     number: 13,
-    book: 'Harry Potter and the Chamber of Secrets',
+    book: 'Harry Potter..All'
   },
   kids: [
     {
@@ -284,11 +284,12 @@ const person = {
     {
       name: 'Revian',
       age: 1
-    }
-  ]
-}
+    }, {
+      name: 'Cannon',
+      age: 3
+    }],
 
-person.kids
+}
 //////////////////////////////////PROBLEMS 13-14//////////////////////////////////
 /*
   For the last two problems, you will be determining the 
@@ -313,7 +314,7 @@ const workout = {
 //let context1 = myFunc
 //let context1 = window
 //let context1 = global
-let context1 = workout
+let context1 = workout;
 
 ////////////////////PROBLEM 14////////////////////
 /*
@@ -326,6 +327,6 @@ function myFunc() {
 }
 
 //let context2 = myFunc
-let context2 = window;
+let context2 = this;
 //let context2 = global
 //let context2 = workout
